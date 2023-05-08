@@ -8,11 +8,17 @@ window.addEventListener("scroll", () => {
   } else {
     navbar.style.height = "90px";
   }
+  console.log(window.scrollY);
 });
 
-// Réduire la navbar quand on descend vers le vite, la remettre à sa taille initiale si on remonte tout en haut
-
 // Faire apparaitre l'image de la partie improvise
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    imgImprovise.style.opacity = 1;
+	imgImprovise.style.transform = "translateX(0px)";
+  } 
+});
+
 
 // Faire apparaitre la popup quand on est en bas du site
 
