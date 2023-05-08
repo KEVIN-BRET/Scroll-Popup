@@ -27,4 +27,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Bonus : quand on clicke sur la popup elle disparait pour toujours
+// Bonus : quand on clicke sur la popup elle disparait pour toujours :
+closeBtn.addEventListener("click", () => {
+  popup.style.display = "none";
+});
