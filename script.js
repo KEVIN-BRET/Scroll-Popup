@@ -8,18 +8,23 @@ window.addEventListener("scroll", () => {
   } else {
     navbar.style.height = "90px";
   }
-  console.log(window.scrollY);
 });
 
-// Faire apparaitre l'image de la partie improvise
+// Faire apparaitre l'image de la partie improvise :
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     imgImprovise.style.opacity = 1;
-	imgImprovise.style.transform = "translateX(0px)";
-  } 
+    imgImprovise.style.transform = "translateX(0px)";
+  }
 });
 
-
-// Faire apparaitre la popup quand on est en bas du site
+// Faire apparaitre la popup quand on est en bas du site :
+window.addEventListener("scroll", () => {
+  // Si on scroll jusqu'en bas de la page :
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    popup.style.opacity = 1;
+    popup.style.transform = "translateX(0px)";
+  }
+});
 
 // Bonus : quand on clicke sur la popup elle disparait pour toujours
