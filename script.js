@@ -1,4 +1,14 @@
-// Créer un événement au scroll
+// On ne pointera pas les éléments du HTML,
+// on utilisera directement leur id.
+
+// Changer l'épaisseur de la navbar au scroll :
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 0) {
+    navbar.style.height = "40px";
+  } else {
+    navbar.style.height = "90px";
+  }
+});
 
 // Réduire la navbar quand on descend vers le vite, la remettre à sa taille initiale si on remonte tout en haut
 
